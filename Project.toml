@@ -1,0 +1,7 @@
+name = "BeatIt"
+uuid = "b61b3607-cdec-4fb1-b4dc-9fcd731e3232"
+authors = ["Leticia-maria <leticiapequeno30@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+MolecularGraph = "6c89ec66-9cd8-5372-9f91-fabc50dd27fd"
