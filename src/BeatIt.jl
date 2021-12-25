@@ -25,7 +25,10 @@ end
 
 function smiles_decoder(X)
     smi = ""
-    X = 
+    X = maximum(X, dims=1)
+    for i in X
+        smi += index2smi[i]
+    end
 end
 
 end # module
