@@ -24,7 +24,8 @@ function smiles_encoder(smiles)
 end
 
 function smiles_decoder(X)
-
+    smi = ""
+    X = 
 end
 
 end # module
