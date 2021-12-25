@@ -1,4 +1,6 @@
-module BeatIt
+import Pkg
+Pkg.add("MolecularGraph")
+using MolecularGraph
 
 SMILES_CHARS = [' ',
                   '#', '%', '(', ')', '+', '-', '.', '/',
@@ -31,4 +33,5 @@ function smiles_decoder(X)
     end
 end
 
-end # module
+mat = smiles_encoder("CC1CCN(CC1N(C)C2=NC=NC3=C2C=CN3)C(=O)CC#N")
+
