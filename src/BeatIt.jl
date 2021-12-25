@@ -23,6 +23,8 @@ function smiles_encoder(smiles)
     return X
 end
 
+function smiles_decoder(X)
 
+end
 
 end # module
