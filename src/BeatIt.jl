@@ -31,6 +31,7 @@ function smiles_decoder(X)
     for i in X
         smi += index2smi[i]
     end
+    return smi
 end
 
 mat = smiles_encoder("CC1CCN(CC1N(C)C2=NC=NC3=C2C=CN3)C(=O)CC#N")
