@@ -22,13 +22,13 @@ function smiles_encoder(smiles)
     return X
 end
 
-function smiles_decoder(X)
-    smi = ""
-    X = maximum(X, dims=1)
-    for i in X
-        smi += index2smi[i]
-    end
-    return smi
-end
+#function smiles_decoder(X)
+#    smi = ""
+#    X = maximum(X, dims=1)
+#    for i in X
+#        smi += index2smi[i]
+#    end
+#    return smi
+#end
 
 end 
