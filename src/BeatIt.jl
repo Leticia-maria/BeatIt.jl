@@ -1,5 +1,13 @@
 module BeatIt
 
+win = Window("Testing") |> (bx = Box(:v));
+
+tb = textbox(String);
+push!(bx, tb);
+showall(win);
+
+SMILES = smiles.signal.value
+
 SMILES_CHARS = [' ',
                   '#', '%', '(', ')', '+', '-', '.', '/',
                   '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
@@ -13,10 +21,10 @@ SMILES_CHARS = [' ',
 smi2index = Dict((c,i) for (i,c) in enumerate(SMILES_CHARS))
 index2smi = Dict((i,c) for (i,c) in enumerate(SMILES_CHARS))
 
-function smiles_encoder(smiles)
+function smiles_encoder(SMILES)
     maxlen=120
     X = zeros(Int, (maxlen, length(SMILES_CHARS)))
-    for (i,c) in enumerate(smiles)
+    for (i,c) in enumerate(SMILES)
         X[i, smi2index[c]] = 1
     end
     return X
