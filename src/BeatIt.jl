@@ -1,6 +1,4 @@
-import Pkg
-Pkg.add("MolecularGraph")
-using MolecularGraph
+module BeatIt
 
 SMILES_CHARS = [' ',
                   '#', '%', '(', ')', '+', '-', '.', '/',
@@ -17,8 +15,7 @@ index2smi = Dict((i,c) for (i,c) in enumerate(SMILES_CHARS))
 
 function smiles_encoder(smiles)
     maxlen=120
-    smiles = MolecularGraph.smilestomol(smiles)
-    X = zeros((maxlen, length(SMILES_CHARS)))
+    X = zeros(Int, (maxlen, length(SMILES_CHARS)))
     for (i,c) in enumerate(smiles)
         X[i, smi2index[c]] = 1
     end
@@ -34,5 +31,4 @@ function smiles_decoder(X)
     return smi
 end
 
-mat = smiles_encoder("CC1CCN(CC1N(C)C2=NC=NC3=C2C=CN3)C(=O)CC#N")
-
+end 

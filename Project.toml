@@ -4,4 +4,6 @@ authors = ["Leticia-maria <leticiapequeno30@gmail.com>"]
 version = "0.1.0"
 
 [deps]
+Gtk = "4c0ca9eb-093a-5379-98c5-f87ac0bbbf44"
+GtkReactive = "27996c0f-39cd-5cc1-a27a-05f136f946b6"
 MolecularGraph = "6c89ec66-9cd8-5372-9f91-fabc50dd27fd"
